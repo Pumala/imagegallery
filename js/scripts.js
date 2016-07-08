@@ -85,6 +85,7 @@ for (var i = 0; i < allSmallImgs.length; i++) {
 }
 
 window.onload = resize;
+
 window.onresize = resize;
 
 function resize(){
