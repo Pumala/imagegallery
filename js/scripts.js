@@ -6,6 +6,7 @@ var smallRightArrow = document.getElementById("smallRightArrow");
 var smallImg1 = document.getElementById("smallImg1");
 var smallImg2 = document.getElementById("smallImg2");
 var smallImg3 = document.getElementById("smallImg3");
+var arrows = document.getElementsByClassName("arrows");
 var imgNum = 1;
 var smallImgNum = 0;
 
@@ -84,22 +85,21 @@ for (var i = 0; i < allSmallImgs.length; i++) {
 }
 
 window.onload = resize;
-
 window.onresize = resize;
 
 function resize(){
     if(window.innerWidth < 775) {
-        bigLeftArrow.classList.remove("fa-chevron-circle-left");
-        bigRightArrow.classList.remove("fa-chevron-circle-right");
-        smallLeftArrow.classList.remove("fa-chevron-left");
-        smallRightArrow.classList.remove("fa-chevron-right");
+        for (var i = 0; i < arrows.length; i++) {
+            arrows[i].classList.remove("show");
+            arrows[i].classList.add("hidden");
+        }
         smallImg1.setAttribute("src", "css/images/nature1.jpg");
         smallImg2.setAttribute("src", "css/images/nature2.jpg");
         smallImg3.setAttribute("src", "css/images/nature3.jpg");
     } else if (window.innerWidth >= 775) {
-        bigLeftArrow.classList.add("fa-chevron-circle-left");
-        bigRightArrow.classList.add("fa-chevron-circle-right");
-        smallLeftArrow.classList.add("fa-chevron-left");
-        smallRightArrow.classList.add("fa-chevron-right");
+        for (var i = 0; i < arrows.length; i++) {
+            arrows[i].classList.remove("hidden");
+            arrows[i].classList.add("show");
+        }
     }
 };
