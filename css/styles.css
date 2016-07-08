@@ -53,6 +53,7 @@ table {
   content: " ";
   display: table;
 }
+
 .grouping:after {
   clear: both;
 }
@@ -111,6 +112,14 @@ h1 {
     height: inherit;
 }
 
+.extraImgs, .hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
 @media screen and (max-width: 775px) {
     .container {
         width: 100%;
@@ -127,11 +136,11 @@ h1 {
         width: 50%;
         height: 230px;
     }
-    .bigLeftArrow, .bigRightArrow, .smallLeftArrow, .smallRightArrow {
-        display: block;
-    }
     .top {
         height: 80px;
+    }
+    .extraImgs {
+        display: block;
     }
     .tinyArrows {
         margin-top: 0;
