@@ -76,10 +76,6 @@ h1 {
     margin: 0 20px;
 }
 
-.fa {
-    cursor: pointer;
-}
-
 .fa-chevron-circle-left,
 #smallLeftArrow {
     float: left;
@@ -120,6 +116,9 @@ h1 {
 }
 
 @media screen and (max-width: 775px) {
+   .fa, img {
+    cursor: pointer;
+   }
     .container {
         width: 100%;
     }
