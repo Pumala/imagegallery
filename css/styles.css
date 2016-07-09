@@ -41,7 +41,6 @@ ol, ul {
   content: " ";
   display: table;
 }
-
 .grouping:after {
   clear: both;
 }
@@ -104,10 +103,13 @@ h1 {
     display: block;
 }
 
-@media screen and (max-width: 775px) {
-   .fa, img {
+@media screen and (min-width: 775px) {
+    .fa, img {
     cursor: pointer;
-   }
+    }
+}
+
+@media screen and (max-width: 774px) {
     .container {
         width: 100%;
     }
