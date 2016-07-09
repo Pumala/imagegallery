@@ -34,18 +34,6 @@ body {
 ol, ul {
     list-style: none;
 }
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
 
 /* micro clear fix */
 .grouping:before,
@@ -75,10 +63,6 @@ h1 {
     display: inline-block;
     float: left;
     margin: 0 20px;
-}
-
-.fa {
-    cursor: pointer;
 }
 
 .fa-chevron-circle-left,
@@ -121,6 +105,9 @@ h1 {
 }
 
 @media screen and (max-width: 775px) {
+   .fa, img {
+    cursor: pointer;
+   }
     .container {
         width: 100%;
     }
